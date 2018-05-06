@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>정규식(Regular Expression)</title>
+</head>
+<body>
+	<script>
+		var regExp = /a/;
+		var str = "abcd"; 
+		var res = regExp.test(str);
+		// document.write(res);
+		var regExp2 = / /g; //띄어쓰기가 "_" 로 
+		var str2 = "Hi my name is Shin";
+		var str22 = str2.replace(regExp2, "_");
+		// document.write(str22); 
+		var str3 = "acdfsd";
+		var hcheck = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+		var ishan = hcheck.test(str3);
+		// document.write(ishan);
+		var str4 = "mail@naver.com";
+		var echeck = /@/;
+		var isemail = echeck.test(str4);
+		// document.write(isemail);
+		var str5 = "mail@daum.net";
+		var echeck2 = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+		var isemail2 = echeck2.test(str5);
+		document.write(isemail2);
+	</script>
+</body>
+</html>

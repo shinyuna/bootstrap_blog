@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+</head>
+<body>	
+		<h1 id="display"></h1>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		//변수(variables) =컴퓨터메모리에 값을 저장하는 공간 
+		var a = 1; 
+		var b = 2;
+		var c = a+b;
+		// document.write(a==b);
+		var c = [9,8,7,6,5,4,3,2,1];
+		// document.write(c[0]);
+		
+
+		// 객체(object)
+		var d ={"name":"ShinYuna","age":17,"email":"yuna4573@naver.com"};
+		d.name= "Ms."+d.name
+		// document.write(d.name);
+
+		//함수 
+		function getDate(){
+			// document.write(new Date());
+		}
+		getDate();
+
+		//변수의 유효범위(scope)
+		var name = "Park"; //전역변수(Global)
+		function setName(){
+			var name = "Hong"; // 지역변수(Local)
+			//함수 안에서만 접근 가능
+			//var 빼면 hong 안빼면 park
+		}
+		setName();
+		// document.write(name);
+
+		var getName = function(val){
+			document.write("Ms."+val);
+		};
+
+		// var h1 = document.getElementById("display");
+		//  h1.innerHTML = new Date(); jQuery로 하면  ==> 
+
+		$("#display").html(new Date());
+
+
+	</script>
+</body>
+</html>
